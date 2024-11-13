@@ -18,8 +18,8 @@ app.use(express.static('public'));
 // create `ExpressHandlebars` instance and configure the layouts and partials dir.
 const hbs = handlebars.create({
   extname: 'hbs',
-  layoutsDir: __dirname + '/views/layouts',
-  partialsDir: __dirname + '/views/partials',
+  layoutsDir: __dirname + '/src/views/layouts',
+  partialsDir: __dirname + '/src/views/partials',
 });
 // database configuration
 const dbConfig = {
