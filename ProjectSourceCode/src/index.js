@@ -21,6 +21,11 @@ const hbs = handlebars.create({
   layoutsDir: __dirname + '/src/views/layouts',
   partialsDir: __dirname + '/src/views/partials',
 });
+
+console.log(__dirname, path.join(__dirname, 'src', 'views'))
+app.set('views', path.join(__dirname, 'src', 'views'));
+app.use(express.static(path.join(__dirname, 'resources'))); 
+
 // database configuration
 const dbConfig = {
   host: 'db', // the database server
