@@ -7,11 +7,34 @@ body {
     font-family: Arial, sans-serif; /* clean simple font */
     margin: 0;
     padding: 0;
+    /*TODO: line-height: 1.6*/
 }
+/*
+TODO: Container
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+ Styling for form-group to add spacing 
+.form-group {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block; Make labels block elements for cleaner layout 
+    margin-bottom: 5px;
+}
+*/
 /* Navbar Styling */
 .navbar {
     background-color: #ffe4e1; /* Light pink background for the navbar */
     border-bottom: 3px solid #ff69b4; /* Slightly darker pink border */
+    /*TODO: 
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    */
 }
 .navbar a {
     color: #ff1493; /* Bright pink color for navbar links -- just chose this for now*/
@@ -31,6 +54,7 @@ body {
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease, border-color 0.3s ease;
+    /*TODO: margin:5px 0;*/
 }
 .btn-primary:hover {
     background-color: #ff1493; /* Brighter pink on hover */
@@ -55,10 +79,25 @@ footer {
     padding: 15px;
     text-align: center;
     width: 100%;
-    position: relative;
+    position: relative; 
     bottom: 0;
+    /*maybe we don't need position and bottom*/
 }
 footer p {
     margin: 0;
     font-size: 14px;
 }
+
+/*TODO: Responsive Navbar
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar a {
+        padding: 8px 15px;
+        width: 100%;
+        text-align: center;
+    }
+}
+*/

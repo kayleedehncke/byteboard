@@ -2,13 +2,13 @@
 CREATE TABLE IF NOT EXISTS users (
   username VARCHAR(50) PRIMARY KEY,
   password CHAR(60) NOT NULL,
-  email VARCHAR(50)
-);
+  email VARCHAR(50) -- TODO: UNIQUE
+); -- TODO: add first_name and last_name
 CREATE TABLE IF NOT EXISTS recipes (
   recipe_id SERIAL PRIMARY KEY NOT NULL,
   recipe_name VARCHAR(75), 
-  recipe_difficulty VARCHAR(100) CONSTRAINT limited_values CHECK (difficulty in ('easy', 'moderate', 'difficult', 'very_difficult'))
-);
+  recipe_difficulty VARCHAR(100) CONSTRAINT limited_values CHECK (recipe_difficulty IN ('easy', 'moderate', 'difficult', 'very_difficult'))
+); -- changed difficulty to recipe_difficulty for correctness
 CREATE TABLE IF NOT EXISTS images (
   image_id SERIAL PRIMARY KEY NOT NULL,
   image_url VARCHAR(300) NOT NULL,
